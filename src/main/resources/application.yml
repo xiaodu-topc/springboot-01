@@ -1,0 +1,29 @@
+server:
+  port: 8089
+  context-path: /xiaodu
+#debug: true
+spring:
+  profiles:
+    active: test
+
+---
+## 数据源
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:mysql://106.12.196.23:3306/xiaodu?characterEncoding=UTF-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+## 配置springdata-jpa
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+## 配置mybatis
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  type-aliases-package: com.xiaodu.springboot.entity
+  mapper-locations: classpath:mybatis/mapper/*.xml
