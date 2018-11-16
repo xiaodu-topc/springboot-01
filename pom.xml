@@ -88,7 +88,12 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-
+<!--hutool-->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>4.0.10</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
